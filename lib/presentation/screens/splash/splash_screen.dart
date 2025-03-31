@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:social_network/presentation/screens/home/home_screen.dart';
+import 'package:social_network/presentation/screens/welcome_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -31,7 +31,7 @@ class _SplashScreen extends State<SplashScreen> {
       if (!mounted) return;
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => HomeScreen()),
+        MaterialPageRoute(builder: (context) => WelcomeScreen()),
       );
     });
   }
