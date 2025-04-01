@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:social_network/core/utils/validator.dart';
-import 'package:social_network/data/models/auth_models/signup_model.dart';
+import 'package:social_network/data/models/auth_model/signup_model.dart';
 import 'package:social_network/data/repositories/auth_repository.dart';
 
 class SignupController extends ChangeNotifier {

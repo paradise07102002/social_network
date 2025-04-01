@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:http/http.dart' as http;
-import 'package:social_network/data/models/auth_models/login_model.dart';
-import 'package:social_network/data/models/auth_models/signup_model.dart';
+import 'package:social_network/data/models/auth_model/login_model.dart';
+import 'package:social_network/data/models/auth_model/signup_model.dart';
 import 'package:social_network/domain/repositories/auth_repository.dart';
 
 class AuthRepository implements AuthRepositoryy {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:social_network/data/models/auth_models/login_model.dart';
+import 'package:social_network/data/models/auth_model/login_model.dart';
 import 'package:social_network/data/repositories/auth_repository.dart';
 
 class LoginController extends ChangeNotifier {
