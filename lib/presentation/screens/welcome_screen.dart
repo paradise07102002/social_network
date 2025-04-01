@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:social_network/core/widgets/custom_button.dart';
+import 'package:social_network/presentation/screens/auth/login/login_screen.dart';
 import 'package:social_network/presentation/screens/auth/signup/signup_fullname_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -60,7 +61,12 @@ class _WelcomeScreen extends State<WelcomeScreen> {
               borderColor: Colors.blueAccent,
               textColor: Colors.blueAccent,
               content: 'Login',
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                );
+              },
             ),
           ],
         ),

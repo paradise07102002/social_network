@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:social_network/data/repositories/auth_repository.dart';
+import 'package:social_network/presentation/screens/home/home_screen.dart';
 import 'package:social_network/presentation/screens/welcome_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -12,10 +14,25 @@ class _SplashScreen extends State<SplashScreen> {
   double _opacity = 0.8;
   double _scale = 0.8;
 
+  final AuthRepository _authRepository = AuthRepository();
+
   @override
   void initState() {
     super.initState();
     _startAnimation();
+    _checkAuthentication();
+  }
+
+  Future<void> _checkAuthentication() async {
+    final isLoggedIn = await _authRepository.refreshToken();
+
+    if (!mounted) return;
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => isLoggedIn ? HomeScreen() : WelcomeScreen(),
+      ),
+    );
   }
 
   void _startAnimation() {
@@ -25,14 +42,6 @@ class _SplashScreen extends State<SplashScreen> {
         _opacity = 1.0;
         _scale = 1.2;
       });
-    });
-
-    Future.delayed(Duration(seconds: 3), () {
-      if (!mounted) return;
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => WelcomeScreen()),
-      );
     });
   }
 

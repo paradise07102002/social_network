@@ -22,20 +22,18 @@ class CustomButton extends StatefulWidget {
 class _CustomButton extends State<CustomButton> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: 50,
-      decoration: BoxDecoration(
-        color: widget.backgroundColor,
-        borderRadius: BorderRadius.circular(15),
-        border: Border.all(color: widget.borderColor, width: 2),
-      ),
-      child: TextButton(
+      child: ElevatedButton(
         onPressed: widget.onPressed,
-        child: Text(
-          widget.content,
-          style: TextStyle(color: widget.textColor, fontSize: 18),
+        style: ElevatedButton.styleFrom(
+          backgroundColor: widget.backgroundColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
         ),
+        child: Text(widget.content, style: TextStyle(color: widget.textColor, fontSize: 16)),
       ),
     );
   }
