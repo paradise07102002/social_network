@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:social_network/data/repositories/auth_repository.dart';
-import 'package:social_network/presentation/screens/home/home_screen.dart';
+import 'package:social_network/presentation/screens/main_screen.dart';
 import 'package:social_network/presentation/screens/welcome_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -30,7 +30,7 @@ class _SplashScreen extends State<SplashScreen> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => isLoggedIn ? HomeScreen() : WelcomeScreen(),
+        builder: (context) => isLoggedIn ? MainScreen() : WelcomeScreen(),
       ),
     );
   }
