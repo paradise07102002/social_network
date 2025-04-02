@@ -6,7 +6,7 @@ import 'package:social_network/data/models/auth_model/signup_model.dart';
 import 'package:social_network/domain/repositories/auth_repository.dart';
 
 class AuthRepository implements AuthRepositoryy {
-  final baseUrl = 'http://10.0.2.2:5151/api/Auth';
+  final baseUrl = 'http://192.168.1.167:5151/api/Auth';
   final FlutterSecureStorage secureStorage = const FlutterSecureStorage();
   final String accessTokenKey = "access_token";
   final String refreshTokenKey = "refresh_token";

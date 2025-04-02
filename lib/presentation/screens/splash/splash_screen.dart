@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:social_network/data/repositories/auth_repository.dart';
+import 'package:social_network/presentation/components/post/post_list.dart';
 import 'package:social_network/presentation/screens/main_screen.dart';
 import 'package:social_network/presentation/screens/welcome_screen.dart';
 
